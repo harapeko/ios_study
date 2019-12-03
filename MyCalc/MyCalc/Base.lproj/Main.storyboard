@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
@@ -11,8 +11,8 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyCalc" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="PoK-aQ-sKi"/>
-                        <viewControllerLayoutGuide type="bottom" id="RBa-5c-nUa"/>
+                        <viewControllerLayoutGuide type="top" id="iv9-Vg-r3a"/>
+                        <viewControllerLayoutGuide type="bottom" id="ft6-ez-Lig"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -138,7 +138,7 @@
                                 <state key="normal" title="10%引き"/>
                                 <connections>
                                     <action selector="tap10引きButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8A8-qH-zas"/>
-                                    <segue destination="BhJ-fR-7Ue" kind="modal" id="JrK-vy-mUa"/>
+                                    <segue destination="BhJ-fR-7Ue" kind="presentation" id="JrK-vy-mUa"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -150,15 +150,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="95.200000000000003" y="205.54722638680661"/>
+            <point key="canvasLocation" x="178.5" y="217.12735181704923"/>
         </scene>
         <!--Result View Controller-->
         <scene sceneID="Zip-0H-Fbu">
             <objects>
                 <viewController id="BhJ-fR-7Ue" customClass="ResultViewController" customModule="MyCalc" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Ld7-8G-ihk"/>
-                        <viewControllerLayoutGuide type="bottom" id="DX7-Hc-OfY"/>
+                        <viewControllerLayoutGuide type="top" id="kpI-df-V9M"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ebr-fR-fKe"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="lJV-wL-z2l">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
@@ -195,7 +195,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SKt-YU-kP1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="1dP-Bm-r1H" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="879" y="205"/>
+            <point key="canvasLocation" x="1108" y="217"/>
         </scene>
     </scenes>
 </document>
