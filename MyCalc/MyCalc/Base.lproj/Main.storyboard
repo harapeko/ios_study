@@ -138,6 +138,7 @@
                                 <state key="normal" title="10%引き"/>
                                 <connections>
                                     <action selector="tap10引きButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8A8-qH-zas"/>
+                                    <segue destination="BhJ-fR-7Ue" kind="modal" id="JrK-vy-mUa"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -150,6 +151,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="95.200000000000003" y="205.54722638680661"/>
+        </scene>
+        <!--Result View Controller-->
+        <scene sceneID="Zip-0H-Fbu">
+            <objects>
+                <viewController id="BhJ-fR-7Ue" customClass="ResultViewController" customModule="MyCalc" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ld7-8G-ihk"/>
+                        <viewControllerLayoutGuide type="bottom" id="DX7-Hc-OfY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lJV-wL-z2l">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="計算結果" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mx0-AK-u9A">
+                                <rect key="frame" x="16" y="40" width="70" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fk1-OZ-brL">
+                                <rect key="frame" x="16" y="69" width="288" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U4O-8H-8vI">
+                                <rect key="frame" x="16" y="160" width="288" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="別の計算をする"/>
+                                <connections>
+                                    <segue destination="1dP-Bm-r1H" kind="unwind" unwindAction="restart:" id="GMn-0y-PH8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="resultField" destination="fk1-OZ-brL" id="xeE-Bb-Ju3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SKt-YU-kP1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="1dP-Bm-r1H" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="879" y="205"/>
         </scene>
     </scenes>
 </document>
