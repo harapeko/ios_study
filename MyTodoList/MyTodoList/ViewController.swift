@@ -17,7 +17,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // 保存しているTODOの読み込み処理
         let userDefaults = UserDefaults.standard
         if let storedTodoList =  userDefaults.object(forKey: "todoList") as? Data {
@@ -31,22 +31,22 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             }
         }
     }
-    
-    
+
+
     // +ボタンを押した時に呼ばれる処理
     @IBAction func tapAddButton(_ sender: Any) {
         // アラートダイアログを生成
         let alertController = UIAlertController(title: "TODO追加",
                                                 message: "TODOを入力してください",
                                                 preferredStyle: UIAlertController.Style.alert)
-        
+
         // テキストエリア追加
         alertController.addTextField(configurationHandler: nil)
 
         // OKボタン追加
         let okAction = UIAlertAction(title: "OK",
                                      style: UIAlertAction.Style.default) { (action: UIAlertAction) in
-                                        
+
             // OKボタンがタップされたときの処理
             if let textField = alertController.textFields?.first {
                 // TODO配列に入力値を挿入する
@@ -86,10 +86,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     // テーブルの行数を返却する
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // TODO配列の長さを返却
-        print("TODO配列長さ \(todoList.count)")
-        return todoList.count
+        todoList.count
     }
-    
+
     // テーブルの行ごとのセルを返却する
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // storyboadで設定したtodoCell識別子を利用して再利用可能なセルを取得する
@@ -108,7 +107,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
         return cell
     }
-    
+
     // セルをタップしたときの処理
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         let myTodo =  todoList[indexPath.row]
@@ -157,18 +156,18 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 // NSSecureCodingプロトコルに準拠する必要がある
 class MyTodo: NSObject, NSSecureCoding {
     static var supportsSecureCoding: Bool {
-        return true
+        true
     }
-    
+
     // TODOのタイトル
     var todoTitle: String?
     // TODOを完了したかどうかを表すフラグ
     var todoDone: Bool = false
     // コンストラクタ
     override init() {
-        
+
     }
-    
+
     // NSCodingプロトコルに宣言されているデシリアライズ処理
     required init?(coder aDcoder: NSCoder) {
         todoTitle = aDcoder.decodeObject(forKey: "todoTTitle") as? String
