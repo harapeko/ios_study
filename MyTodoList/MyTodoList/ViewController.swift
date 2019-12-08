@@ -109,7 +109,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
 
     // セルをタップしたときの処理
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let myTodo =  todoList[indexPath.row]
         // 完了状態を更新
         myTodo.todoDone = !myTodo.todoDone
