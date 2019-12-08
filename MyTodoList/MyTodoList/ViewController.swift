@@ -10,7 +10,6 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-    
     // TODOを格納する配列
     var todoList = [MyTodo]()
 
@@ -23,8 +22,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let userDefaults = UserDefaults.standard
         if let storedTodoList =  userDefaults.object(forKey: "todoList") as? Data {
             do {
-                if let unarchiveTodoList =  try NSKeyedUnarchiver.unarchivedObject(ofClasses: [NSArray.self, MyTodo.self],
-                                                                                   from: storedTodoList) as? [MyTodo] {
+                if let unarchiveTodoList =  try NSKeyedUnarchiver.unarchivedObject(
+                    ofClasses: [NSArray.self, MyTodo.self], from: storedTodoList) as? [MyTodo] {
                     todoList.append(contentsOf: unarchiveTodoList)
                 }
             } catch {
@@ -33,7 +32,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
     }
     
+    
+    // +ボタンを押した時に呼ばれる処理
     @IBAction func tapAddButton(_ sender: Any) {
+        // アラートダイアログを生成
         let alertController = UIAlertController(title: "TODO追加",
                                                 message: "TODOを入力してください",
                                                 preferredStyle: UIAlertController.Style.alert)
@@ -44,6 +46,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         // OKボタン追加
         let okAction = UIAlertAction(title: "OK",
                                      style: UIAlertAction.Style.default) { (action: UIAlertAction) in
+                                        
+            // OKボタンがタップされたときの処理
             if let textField = alertController.textFields?.first {
                 // TODO配列に入力値を挿入する
                 let myTodo = MyTodo()
@@ -56,8 +60,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                 let userDefauts = UserDefaults.standard
                 // Data型にシリアライズする
                 do {
-                    let data = try NSKeyedArchiver.archivedData(withRootObject: self.todoList,
-                                                                requiringSecureCoding: true)
+                    let data = try NSKeyedArchiver.archivedData(
+                        withRootObject: self.todoList, requiringSecureCoding: true)
                     userDefauts.set(data, forKey: "todoList")
                     userDefauts.synchronize()
                 } catch {
@@ -82,6 +86,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     // テーブルの行数を返却する
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // TODO配列の長さを返却
+        print("TODO配列長さ \(todoList.count)")
         return todoList.count
     }
     
@@ -89,10 +94,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // storyboadで設定したtodoCell識別子を利用して再利用可能なセルを取得する
         let cell = tableView.dequeueReusableCell(withIdentifier: "todoCell", for: indexPath)
-        
 
         // 行番号に合ったTODOの情報を取得
-        let myTodo =  todoList[indexPath.row]
+        let myTodo = todoList[indexPath.row]
         // セルのラベルにTodoのタイトルをセット
         cell.textLabel?.text = myTodo.todoTitle
         // セルのチェックマーク状態をセット
@@ -114,8 +118,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         tableView.reloadRows(at: [indexPath], with: UITableView.RowAnimation.fade)
         // データ保存。Data型にシリアライズする
         do {
-            let data = try NSKeyedArchiver.archivedData(withRootObject: todoList,
-                                                        requiringSecureCoding: true)
+            let data: Data = try NSKeyedArchiver.archivedData(
+                withRootObject: todoList, requiringSecureCoding: true)
             // UserDeefaultsに保存
             let userDefaults = UserDefaults.standard
             userDefaults.set(data, forKey: "todoList")
