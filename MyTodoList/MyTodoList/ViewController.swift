@@ -20,7 +20,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
         // 保存しているTODOの読み込み処理
         let userDefaults = UserDefaults.standard
-        if let storedTodoList =  userDefaults.object(forKey: "todoList") as? Data {
+        if let storedTodoList = userDefaults.object(forKey: "todoList") as? Data {
             do {
                 if let unarchiveTodoList =  try NSKeyedUnarchiver.unarchivedObject(
                     ofClasses: [NSArray.self, MyTodo.self], from: storedTodoList) as? [MyTodo] {
@@ -57,13 +57,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                 self.tableView.insertRows(at: [IndexPath(row: 0, section: 0)],
                                           with: UITableView.RowAnimation.right)
                 // TODOの保存処理
-                let userDefauts = UserDefaults.standard
+                let userDefaults = UserDefaults.standard
                 // Data型にシリアライズする
                 do {
                     let data = try NSKeyedArchiver.archivedData(
                         withRootObject: self.todoList, requiringSecureCoding: true)
-                    userDefauts.set(data, forKey: "todoList")
-                    userDefauts.synchronize()
+                    userDefaults.set(data, forKey: "todoList")
+                    userDefaults.synchronize()
                 } catch {
                     // エラー処理なし
                 }
@@ -169,9 +169,9 @@ class MyTodo: NSObject, NSSecureCoding {
     }
 
     // NSCodingプロトコルに宣言されているデシリアライズ処理
-    required init?(coder aDcoder: NSCoder) {
-        todoTitle = aDcoder.decodeObject(forKey: "todoTTitle") as? String
-        todoDone =  aDcoder.decodeBool(forKey: "todoDone")
+    required init?(coder aDecoder: NSCoder) {
+        todoTitle = aDecoder.decodeObject(forKey: "todoTitle") as? String
+        todoDone =  aDecoder.decodeBool(forKey: "todoDone")
     }
     // NSCodingプロトコルに宣言されているシリアライズ処理
     func encode(with aCoder: NSCoder) {
