@@ -42,5 +42,101 @@
             </objects>
             <point key="canvasLocation" x="-57" y="138"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="Rqs-gI-LF3">
+            <objects>
+                <viewController id="btW-7Q-HEn" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RIH-Sg-fFp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Q1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jbv-1e-bHf">
+                                <rect key="frame" x="28" y="42" width="30.5" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="UDx-ql-emG">
+                                <rect key="frame" x="28" y="94" width="319" height="128"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="mXo-Ef-SI4"/>
+                                </constraints>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Qnv-ze-cnu">
+                                <rect key="frame" x="28" y="253" width="319" height="393"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pl0-ea-VbL">
+                                        <rect key="frame" x="0.0" y="0.0" width="319" height="91"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="White">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U1j-KR-zRi">
+                                        <rect key="frame" x="0.0" y="101" width="319" height="90.5"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="銀色">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="53D-UK-CbU">
+                                        <rect key="frame" x="0.0" y="201.5" width="319" height="91"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="みずいろ">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KVv-uw-f7A">
+                                        <rect key="frame" x="0.0" y="302.5" width="319" height="90.5"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="スカーレット">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="correct" translatesAutoresizingMaskIntoConstraints="NO" id="RKX-x8-tbU">
+                                <rect key="frame" x="86.5" y="232.5" width="202" height="202"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="incorrect" translatesAutoresizingMaskIntoConstraints="NO" id="ZL0-SI-XUV">
+                                <rect key="frame" x="87" y="233" width="201" height="201"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Y1n-A2-9bB" firstAttribute="bottom" secondItem="Qnv-ze-cnu" secondAttribute="bottom" constant="21" id="322-XA-T0x"/>
+                            <constraint firstItem="ZL0-SI-XUV" firstAttribute="centerY" secondItem="RIH-Sg-fFp" secondAttribute="centerY" id="CVf-OG-H7S"/>
+                            <constraint firstItem="ZL0-SI-XUV" firstAttribute="centerX" secondItem="RIH-Sg-fFp" secondAttribute="centerX" id="Ejk-4X-K3K"/>
+                            <constraint firstItem="RKX-x8-tbU" firstAttribute="centerX" secondItem="RIH-Sg-fFp" secondAttribute="centerX" id="JQz-yt-RAy"/>
+                            <constraint firstItem="jbv-1e-bHf" firstAttribute="leading" secondItem="Y1n-A2-9bB" secondAttribute="leading" constant="28" id="LPG-NB-3fO"/>
+                            <constraint firstItem="UDx-ql-emG" firstAttribute="trailing" secondItem="Qnv-ze-cnu" secondAttribute="trailing" id="Nlg-du-LqN"/>
+                            <constraint firstItem="UDx-ql-emG" firstAttribute="centerX" secondItem="RIH-Sg-fFp" secondAttribute="centerX" id="QL8-fI-nr0"/>
+                            <constraint firstItem="UDx-ql-emG" firstAttribute="leading" secondItem="Qnv-ze-cnu" secondAttribute="leading" id="WRe-lI-Qhu"/>
+                            <constraint firstItem="Qnv-ze-cnu" firstAttribute="top" secondItem="UDx-ql-emG" secondAttribute="bottom" constant="31" id="bWK-Cf-Ga0"/>
+                            <constraint firstItem="jbv-1e-bHf" firstAttribute="top" secondItem="Y1n-A2-9bB" secondAttribute="top" constant="42" id="bty-LY-uZM"/>
+                            <constraint firstItem="UDx-ql-emG" firstAttribute="top" secondItem="jbv-1e-bHf" secondAttribute="bottom" constant="22" id="uJE-Wg-hvT"/>
+                            <constraint firstItem="RKX-x8-tbU" firstAttribute="centerY" secondItem="RIH-Sg-fFp" secondAttribute="centerY" id="yaN-zS-s9l"/>
+                            <constraint firstItem="jbv-1e-bHf" firstAttribute="leading" secondItem="UDx-ql-emG" secondAttribute="leading" id="ygL-r4-CBa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Y1n-A2-9bB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4X8-To-bUb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="573.60000000000002" y="136.28185907046478"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="correct" width="202" height="202"/>
+        <image name="incorrect" width="201" height="201"/>
+    </resources>
 </document>
