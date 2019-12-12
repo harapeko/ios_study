@@ -25,6 +25,9 @@
                                 <rect key="frame" x="150" y="192" width="74" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="START"/>
+                                <connections>
+                                    <segue destination="btW-7Q-HEn" kind="presentation" id="rcE-Do-hhi"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -40,14 +43,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-57" y="138"/>
+            <point key="canvasLocation" x="-132" y="136"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Rqs-gI-LF3">
             <objects>
-                <viewController id="btW-7Q-HEn" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="question" id="btW-7Q-HEn" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RIH-Sg-fFp">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Q1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jbv-1e-bHf">
@@ -68,10 +71,10 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Qnv-ze-cnu">
-                                <rect key="frame" x="28" y="253" width="319" height="393"/>
+                                <rect key="frame" x="28" y="253" width="319" height="373"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pl0-ea-VbL">
-                                        <rect key="frame" x="0.0" y="0.0" width="319" height="91"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="319" height="86"/>
                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="White">
@@ -79,7 +82,7 @@
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U1j-KR-zRi">
-                                        <rect key="frame" x="0.0" y="101" width="319" height="90.5"/>
+                                        <rect key="frame" x="0.0" y="96" width="319" height="85.5"/>
                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="銀色">
@@ -87,7 +90,7 @@
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="53D-UK-CbU">
-                                        <rect key="frame" x="0.0" y="201.5" width="319" height="91"/>
+                                        <rect key="frame" x="0.0" y="191.5" width="319" height="86"/>
                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="みずいろ">
@@ -95,7 +98,7 @@
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KVv-uw-f7A">
-                                        <rect key="frame" x="0.0" y="302.5" width="319" height="90.5"/>
+                                        <rect key="frame" x="0.0" y="287.5" width="319" height="85.5"/>
                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="スカーレット">
@@ -105,10 +108,10 @@
                                 </subviews>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="correct" translatesAutoresizingMaskIntoConstraints="NO" id="RKX-x8-tbU">
-                                <rect key="frame" x="86.5" y="232.5" width="202" height="202"/>
+                                <rect key="frame" x="86.5" y="222.5" width="202" height="202"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="incorrect" translatesAutoresizingMaskIntoConstraints="NO" id="ZL0-SI-XUV">
-                                <rect key="frame" x="87" y="233" width="201" height="201"/>
+                                <rect key="frame" x="87" y="223" width="201" height="201"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -137,7 +140,7 @@
         <!--View Controller-->
         <scene sceneID="1Cj-g8-2IY">
             <objects>
-                <viewController id="wQn-uP-S5X" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="result" id="wQn-uP-S5X" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Yr0-oM-mHa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -178,7 +181,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zVx-2W-qOb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1216" y="137"/>
+            <point key="canvasLocation" x="1305" y="136"/>
         </scene>
     </scenes>
     <resources>
