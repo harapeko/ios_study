@@ -14,6 +14,7 @@
 		497777FF23A14C5800F683B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 497777FE23A14C5800F683B2 /* Assets.xcassets */; };
 		4977780223A14C5800F683B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4977780023A14C5800F683B2 /* LaunchScreen.storyboard */; };
 		49AEDCAA23A41CC7007336B6 /* question.csv in Resources */ = {isa = PBXBuildFile; fileRef = 49AEDCA723A41B4E007336B6 /* question.csv */; };
+		49AEDCAC23A53962007336B6 /* QuestionDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AEDCAB23A53962007336B6 /* QuestionDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		4977780123A14C5800F683B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4977780323A14C5800F683B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49AEDCA723A41B4E007336B6 /* question.csv */ = {isa = PBXFileReference; lastKnownFileType = file; path = question.csv; sourceTree = SOURCE_ROOT; };
+		49AEDCAB23A53962007336B6 /* QuestionDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				497777F523A14C5600F683B2 /* AppDelegate.swift */,
 				497777F723A14C5600F683B2 /* SceneDelegate.swift */,
 				497777F923A14C5600F683B2 /* ViewController.swift */,
+				49AEDCAB23A53962007336B6 /* QuestionDataManager.swift */,
 				497777FB23A14C5600F683B2 /* Main.storyboard */,
 				497777FE23A14C5800F683B2 /* Assets.xcassets */,
 				4977780023A14C5800F683B2 /* LaunchScreen.storyboard */,
@@ -143,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				497777FA23A14C5600F683B2 /* ViewController.swift in Sources */,
+				49AEDCAC23A53962007336B6 /* QuestionDataManager.swift in Sources */,
 				497777F623A14C5600F683B2 /* AppDelegate.swift in Sources */,
 				497777F823A14C5600F683B2 /* SceneDelegate.swift in Sources */,
 			);
