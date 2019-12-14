@@ -15,6 +15,7 @@
 		4977780223A14C5800F683B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4977780023A14C5800F683B2 /* LaunchScreen.storyboard */; };
 		49AEDCAA23A41CC7007336B6 /* question.csv in Resources */ = {isa = PBXBuildFile; fileRef = 49AEDCA723A41B4E007336B6 /* question.csv */; };
 		49AEDCAC23A53962007336B6 /* QuestionDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AEDCAB23A53962007336B6 /* QuestionDataManager.swift */; };
+		49AEDCB023A56C85007336B6 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AEDCAF23A56C85007336B6 /* StartViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,8 +27,9 @@
 		497777FE23A14C5800F683B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4977780123A14C5800F683B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4977780323A14C5800F683B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		49AEDCA723A41B4E007336B6 /* question.csv */ = {isa = PBXFileReference; lastKnownFileType = file; path = question.csv; sourceTree = SOURCE_ROOT; };
+		49AEDCA723A41B4E007336B6 /* question.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = question.csv; sourceTree = SOURCE_ROOT; };
 		49AEDCAB23A53962007336B6 /* QuestionDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionDataManager.swift; sourceTree = "<group>"; };
+		49AEDCAF23A56C85007336B6 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				497777F523A14C5600F683B2 /* AppDelegate.swift */,
+				49AEDCAF23A56C85007336B6 /* StartViewController.swift */,
 				497777F723A14C5600F683B2 /* SceneDelegate.swift */,
 				497777F923A14C5600F683B2 /* ViewController.swift */,
 				49AEDCAB23A53962007336B6 /* QuestionDataManager.swift */,
@@ -145,6 +148,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49AEDCB023A56C85007336B6 /* StartViewController.swift in Sources */,
 				497777FA23A14C5600F683B2 /* ViewController.swift in Sources */,
 				49AEDCAC23A53962007336B6 /* QuestionDataManager.swift in Sources */,
 				497777F623A14C5600F683B2 /* AppDelegate.swift in Sources */,
