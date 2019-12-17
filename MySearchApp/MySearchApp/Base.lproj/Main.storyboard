@@ -21,7 +21,7 @@
                             <textInputTraits key="textInputTraits"/>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="H5f-Vm-M6A">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="itemCell" id="H5f-Vm-M6A">
                                 <rect key="frame" x="0.0" y="72" width="375" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="H5f-Vm-M6A" id="gYv-9Y-lI9">
@@ -63,6 +63,9 @@
                                         <constraint firstAttribute="bottom" secondItem="Heo-eb-vdw" secondAttribute="bottom" constant="10" id="zir-cO-dwe"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="9LW-TX-7rr" kind="show" id="ize-f0-8d3"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -74,7 +77,43 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ghM-30-Nvv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1077.5999999999999" y="-550.97451274362822"/>
+            <point key="canvasLocation" x="862" y="-552"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="XdQ-gS-Ft2">
+            <objects>
+                <viewController id="9LW-TX-7rr" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1lW-dd-GPL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iqS-Z8-hEn">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="JA5-dc-EWJ" firstAttribute="trailing" secondItem="iqS-Z8-hEn" secondAttribute="trailing" id="7Vt-rl-T4j"/>
+                            <constraint firstItem="iqS-Z8-hEn" firstAttribute="leading" secondItem="JA5-dc-EWJ" secondAttribute="leading" id="B2U-8G-9Pr"/>
+                            <constraint firstItem="iqS-Z8-hEn" firstAttribute="top" secondItem="JA5-dc-EWJ" secondAttribute="top" id="Sr1-Oh-93E"/>
+                            <constraint firstItem="JA5-dc-EWJ" firstAttribute="bottom" secondItem="iqS-Z8-hEn" secondAttribute="bottom" id="XeJ-uf-eWz"/>
+                            <constraint firstItem="iqS-Z8-hEn" firstAttribute="leading" secondItem="JA5-dc-EWJ" secondAttribute="leading" id="aZB-M5-5Bf"/>
+                            <constraint firstItem="JA5-dc-EWJ" firstAttribute="bottom" secondItem="iqS-Z8-hEn" secondAttribute="bottom" id="mm6-QP-g5F"/>
+                            <constraint firstItem="JA5-dc-EWJ" firstAttribute="trailing" secondItem="iqS-Z8-hEn" secondAttribute="trailing" id="qOh-Ih-wEv"/>
+                            <constraint firstItem="iqS-Z8-hEn" firstAttribute="top" secondItem="JA5-dc-EWJ" secondAttribute="top" id="sck-5c-1pR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="JA5-dc-EWJ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="GkS-c1-KSZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CuF-dW-gyA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1559" y="-552"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
