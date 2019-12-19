@@ -176,23 +176,23 @@
                                     <segue destination="Kjy-nS-cvq" kind="unwind" unwindAction="goToTitle:" id="Uud-mu-F1w"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="T1S-i6-8VH">
-                                <rect key="frame" x="107" y="127" width="161" height="204"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="T1S-i6-8VH">
+                                <rect key="frame" x="0.0" y="127" width="375" height="204"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="正解率は" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hD9-BH-ZiS">
-                                        <rect key="frame" x="0.0" y="0.0" width="161" height="48"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="48"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8lz-FS-Jg2">
-                                        <rect key="frame" x="0.0" y="78" width="161" height="48"/>
+                                        <rect key="frame" x="0.0" y="78" width="375" height="48"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="でした" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zHU-TR-bT7">
-                                        <rect key="frame" x="0.0" y="156" width="161" height="48"/>
+                                        <rect key="frame" x="0.0" y="156" width="375" height="48"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -201,6 +201,11 @@
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="wK3-DQ-n8a" firstAttribute="trailing" secondItem="T1S-i6-8VH" secondAttribute="trailing" id="7BC-hd-lZ6"/>
+                            <constraint firstItem="T1S-i6-8VH" firstAttribute="leading" secondItem="wK3-DQ-n8a" secondAttribute="leading" id="Msa-4O-24d"/>
+                            <constraint firstItem="T1S-i6-8VH" firstAttribute="top" secondItem="wK3-DQ-n8a" secondAttribute="top" constant="127" id="hmE-Je-6j3"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="wK3-DQ-n8a"/>
                     </view>
                     <connections>
