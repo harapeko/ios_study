@@ -11,6 +11,7 @@ import UIKit
 class StartViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("start画面")
     }
 
     // 次の画面に繊維される前の準備処理
