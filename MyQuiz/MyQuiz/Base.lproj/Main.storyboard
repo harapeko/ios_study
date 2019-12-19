@@ -159,10 +159,10 @@
             </objects>
             <point key="canvasLocation" x="573.60000000000002" y="136.28185907046478"/>
         </scene>
-        <!--View Controller-->
+        <!--Result View Controller-->
         <scene sceneID="1Cj-g8-2IY">
             <objects>
-                <viewController storyboardIdentifier="result" id="wQn-uP-S5X" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="result" id="wQn-uP-S5X" customClass="ResultViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Yr0-oM-mHa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -172,6 +172,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="タイトルへ戻る"/>
+                                <connections>
+                                    <segue destination="Kjy-nS-cvq" kind="unwind" unwindAction="goToTitle:" id="Uud-mu-F1w"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="T1S-i6-8VH">
                                 <rect key="frame" x="107" y="127" width="161" height="204"/>
@@ -200,8 +203,12 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="wK3-DQ-n8a"/>
                     </view>
+                    <connections>
+                        <outlet property="correctPercentLabel" destination="8lz-FS-Jg2" id="IWZ-gA-rm0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zVx-2W-qOb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Kjy-nS-cvq" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1305" y="136"/>
         </scene>
