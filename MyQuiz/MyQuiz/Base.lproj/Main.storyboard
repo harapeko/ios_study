@@ -80,6 +80,9 @@
                                         <state key="normal" title="White">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="tapAnswer1Button:" destination="btW-7Q-HEn" eventType="touchUpInside" id="1PU-ck-Tqs"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U1j-KR-zRi">
                                         <rect key="frame" x="0.0" y="96" width="319" height="85.5"/>
@@ -88,6 +91,9 @@
                                         <state key="normal" title="銀色">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="tapAnswer2Button:" destination="btW-7Q-HEn" eventType="touchUpInside" id="4Lx-1O-ZXJ"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="53D-UK-CbU">
                                         <rect key="frame" x="0.0" y="191.5" width="319" height="86"/>
@@ -96,6 +102,9 @@
                                         <state key="normal" title="みずいろ">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="tapAnswer3Button:" destination="btW-7Q-HEn" eventType="touchUpInside" id="mhE-w1-f0N"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KVv-uw-f7A">
                                         <rect key="frame" x="0.0" y="287.5" width="319" height="85.5"/>
@@ -104,6 +113,9 @@
                                         <state key="normal" title="スカーレット">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="tapAnswer4Button:" destination="btW-7Q-HEn" eventType="touchUpInside" id="J2I-Ux-S9o"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -132,6 +144,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Y1n-A2-9bB"/>
                     </view>
+                    <connections>
+                        <outlet property="answer1Button" destination="pl0-ea-VbL" id="dF2-dE-LXb"/>
+                        <outlet property="answer2Button" destination="U1j-KR-zRi" id="qo4-97-941"/>
+                        <outlet property="answer3Button" destination="53D-UK-CbU" id="bwC-gS-y68"/>
+                        <outlet property="answer4Button" destination="KVv-uw-f7A" id="Vzt-hu-mHE"/>
+                        <outlet property="correctImageView" destination="RKX-x8-tbU" id="K3y-Y4-cxt"/>
+                        <outlet property="incorrectImageView" destination="ZL0-SI-XUV" id="VZ7-F9-5ck"/>
+                        <outlet property="questionNoLabel" destination="jbv-1e-bHf" id="TSS-bV-TJm"/>
+                        <outlet property="questionTextView" destination="UDx-ql-emG" id="itC-BP-b47"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4X8-To-bUb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
