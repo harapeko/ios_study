@@ -14,6 +14,7 @@
 		4900BBEB23A61893006A33A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4900BBEA23A61893006A33A8 /* Assets.xcassets */; };
 		4900BBEE23A61893006A33A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4900BBEC23A61893006A33A8 /* LaunchScreen.storyboard */; };
 		4968D74923B146E900C74DD6 /* ItemSearchResltSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4968D74823B146E900C74DD6 /* ItemSearchResltSet.swift */; };
+		4968D74B23B1655300C74DD6 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4968D74A23B1655300C74DD6 /* ItemTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		4900BBED23A61893006A33A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4900BBEF23A61893006A33A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4968D74823B146E900C74DD6 /* ItemSearchResltSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemSearchResltSet.swift; sourceTree = "<group>"; };
+		4968D74A23B1655300C74DD6 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				4900BBE123A61892006A33A8 /* AppDelegate.swift */,
+				4968D74A23B1655300C74DD6 /* ItemTableViewCell.swift */,
 				4900BBE323A61892006A33A8 /* SceneDelegate.swift */,
 				4968D74823B146E900C74DD6 /* ItemSearchResltSet.swift */,
 				4900BBE523A61892006A33A8 /* ViewController.swift */,
@@ -143,6 +146,7 @@
 			files = (
 				4900BBE623A61892006A33A8 /* ViewController.swift in Sources */,
 				4900BBE223A61892006A33A8 /* AppDelegate.swift in Sources */,
+				4968D74B23B1655300C74DD6 /* ItemTableViewCell.swift in Sources */,
 				4968D74923B146E900C74DD6 /* ItemSearchResltSet.swift in Sources */,
 				4900BBE423A61892006A33A8 /* SceneDelegate.swift in Sources */,
 			);

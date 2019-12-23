@@ -21,7 +21,7 @@
                             <textInputTraits key="textInputTraits"/>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="itemCell" id="H5f-Vm-M6A">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="itemCell" id="H5f-Vm-M6A" customClass="ItemTableViewCell" customModule="MySearchApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="72" width="375" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="H5f-Vm-M6A" id="gYv-9Y-lI9">
@@ -64,6 +64,9 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="itemImageView" destination="cwS-yM-0y3" id="gqf-lv-rWf"/>
+                                    <outlet property="itemPriceLabel" destination="Heo-eb-vdw" id="khz-gK-KiD"/>
+                                    <outlet property="itemTitleLabel" destination="155-YY-C7e" id="mal-Bz-YGl"/>
                                     <segue destination="9LW-TX-7rr" kind="show" id="ize-f0-8d3"/>
                                 </connections>
                             </tableViewCell>
