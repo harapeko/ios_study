@@ -7,18 +7,21 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Search Item Table View Controller-->
         <scene sceneID="eNC-Ia-6Tg">
             <objects>
-                <tableViewController id="ip1-Sf-eby" sceneMemberID="viewController">
+                <tableViewController id="ip1-Sf-eby" customClass="SearchItemTableViewController" customModule="MySearchApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="120" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="9UO-G5-CTp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="検索キーワードを入力してください" id="IZy-oM-WEn">
+                        <searchBar key="tableHeaderView" contentMode="redraw" text="" placeholder="検索キーワードを入力してください" id="IZy-oM-WEn">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="ip1-Sf-eby" id="FRR-mf-6Z4"/>
+                            </connections>
                         </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="itemCell" id="H5f-Vm-M6A" customClass="ItemTableViewCell" customModule="MySearchApp" customModuleProvider="target">
@@ -82,10 +85,10 @@
             </objects>
             <point key="canvasLocation" x="862" y="-552"/>
         </scene>
-        <!--View Controller-->
+        <!--Web View Controller-->
         <scene sceneID="XdQ-gS-Ft2">
             <objects>
-                <viewController id="9LW-TX-7rr" sceneMemberID="viewController">
+                <viewController id="9LW-TX-7rr" customClass="WebViewController" customModule="MySearchApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1lW-dd-GPL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -113,25 +116,13 @@
                         <viewLayoutGuide key="safeArea" id="JA5-dc-EWJ"/>
                     </view>
                     <navigationItem key="navigationItem" id="GkS-c1-KSZ"/>
+                    <connections>
+                        <outlet property="webView" destination="iqS-Z8-hEn" id="FK2-Ag-DwW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CuF-dW-gyA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1559" y="-552"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MySearchApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="139" y="138"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Qnb-FZ-AUf">
